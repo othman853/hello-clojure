@@ -3,12 +3,12 @@
 
 (defn separate
   [token]
-  #(split % token))
+  #(split % (re-pattern token)))
 
 (defn parse
   ([url]
     (if (= (count url) 0)
       []
-      (map (separate #"=")
-           ((separate #"&") url))))
+      (map (separate "=")
+           ((separate "&") url))))
   ([] []))
