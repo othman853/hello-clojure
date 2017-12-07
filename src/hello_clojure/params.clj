@@ -1,3 +1,5 @@
 (ns hello-clojure.params)
 
-(defn parse "")
+(defn parse
+  [url]
+  "")

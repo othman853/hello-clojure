@@ -3,5 +3,5 @@
             [hello-clojure.params :refer :all]))
 
 (deftest param-parsing
-  testing "HTTP Query Parameter Parsing echoes parameters back."
-  (is (= "lang=Clj" (params/parse "lang=clj"))))
+  (testing "HTTP Query Parameter Parsing echoes parameters back."
+  (is (= "lang=Clj" (params/parse "lang=clj")))))
