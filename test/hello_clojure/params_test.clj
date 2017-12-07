@@ -3,5 +3,9 @@
             [hello-clojure.params :refer :all]))
 
 (deftest param-parsing
-  (testing "HTTP Query Parameter Parsing returns a vector with split key and value"
-  (is (= ["lang" "clj"] (hello-clojure.params/parse "lang=clj")))))
+  (testing "params/parse returns a vector with split key and value"
+  (is(= ["lang" "clj"] (hello-clojure.params/parse "lang=clj")))))
+
+(deftest no-args
+  (testing "params/parse returns empty vector when no params are received"
+    (is(= [] (hello-clojure.params/parse)))))
