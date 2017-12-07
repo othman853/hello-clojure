@@ -2,5 +2,5 @@
   (:require [clojure.string :as string]))
 
 (defn parse
-  [] ([])
-  [url] (string/split url #"="))
+  ([] [])
+  ([url] (string/split url #"=")))
