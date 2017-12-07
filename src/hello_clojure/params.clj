@@ -3,4 +3,5 @@
 
 (defn parse
   ([] [])
-  ([url] (string/split url #"=")))
+  ([url]
+    (map #(string/split % #"=") (string/split url #"&"))))
