@@ -1,36 +1,8 @@
 # hello-clojure
 
-FIXME: description
 
-## Installation
+## Running tests
 
-Download from http://example.com/FIXME.
+Run all tests:  `lein test`
 
-## Usage
-
-FIXME: explanation
-
-    $ java -jar hello-clojure-0.1.0-standalone.jar [args]
-
-## Options
-
-FIXME: listing of options this app accepts.
-
-## Examples
-
-...
-
-### Bugs
-
-...
-
-### Any Other Sections
-### That You Think
-### Might be Useful
-
-## License
-
-Copyright © 2017 FIXME
-
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
+Run single test (from the REPL): `lein test :only hello-clojure.myns/my-test`
