@@ -1,7 +1,7 @@
 (ns hello-clojure.params
-  (:require [clojure.string :as string]))
+  (:require [clojure.string :refer [split]]))
 
 (defn parse
   ([] [])
   ([url]
-    (map #(string/split % #"=") (string/split url #"&"))))
+    (map #(split % #"=") (split url #"&"))))
