@@ -3,4 +3,4 @@
 
 (defn parse
   [url]
-  (string/split url '='))
+  (string/split url "="))
