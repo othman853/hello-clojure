@@ -5,5 +5,5 @@
   ([url]
     (if (= (count url) 0)
       []
-      (map #(split % #"=") (split url #"&"))))
+      (map (fn [param] (split param #"=")) (split url #"&"))))
   ([] []))
