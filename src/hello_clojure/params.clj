@@ -2,4 +2,4 @@
 
 (defn parse
   [url]
-  "")
+  url)
