@@ -1,11 +1,15 @@
 (ns hello-clojure.params-test
   (:require [clojure.test :refer :all]
-            [hello-clojure.params :refer :all]))
+            [hello-clojure.params :refer [parse]]))
 
 (deftest single-param
-  (testing "params/parse returns a vector of vectors of split key and value"
-  (is(= [["lang" "clj"] ["runtime" "jvm"]] (hello-clojure.params/parse "lang=clj&runtime=jvm")))))
+  (testing "parse returns a vector of vectors of split key and value"
+    (is(= [["lang" "clj"] ["runtime" "jvm"]] (parse "lang=clj&runtime=jvm")))))
+
+(deftest empty-str
+  (testing "parse returns an empty vector when received argument is empty str"
+    (is(= [] (parse "")))))
 
 (deftest no-args
-  (testing "params/parse returns empty vector when no params are received"
-    (is(= [] (hello-clojure.params/parse)))))
+  (testing "parse returns empty vector when no params are received"
+    (is(= [] (parse)))))
