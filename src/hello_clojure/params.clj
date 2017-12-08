@@ -9,6 +9,8 @@
   ([url]
     (if (= (count url) 0)
       []
-      (map (split-by "=")
-           ((split-by "&") url))))
+      (reduce merge
+        (map #(apply hash-map %)
+          (map (split-by "=")
+               ((split-by "&") url))))))
   ([] []))

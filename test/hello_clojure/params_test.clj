@@ -3,8 +3,8 @@
             [hello-clojure.params :refer [parse]]))
 
 (deftest single-param
-  (testing "parse returns a vector of vectors of split key and value"
-    (is(= [["lang" "clj"] ["runtime" "jvm"]] (parse "lang=clj&runtime=jvm")))))
+  (testing "parse returns a hash-map of all search params"
+    (is(= {"lang" "clj" "runtime" "jvm"} (parse "lang=clj&runtime=jvm")))))
 
 (deftest empty-str
   (testing "parse returns an empty vector when received argument is empty str"
