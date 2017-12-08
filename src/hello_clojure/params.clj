@@ -1,7 +1,7 @@
 (ns hello-clojure.params
   (:require [clojure.string :refer [split]]))
 
-(defn separate
+(defn split-by
   [token]
   #(split % (re-pattern token)))
 
@@ -9,6 +9,6 @@
   ([url]
     (if (= (count url) 0)
       []
-      (map (separate "=")
-           ((separate "&") url))))
+      (map (split-by "=")
+           ((split-by "&") url))))
   ([] []))
