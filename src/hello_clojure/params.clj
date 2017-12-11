@@ -8,8 +8,9 @@
 (defn parse
   ([url]
     (when (> (count url) 0)
-      (reduce merge
-        (map #(apply hash-map %)
-          (map (split-by "=")
-               ((split-by "&") url))))))
+      (->> url
+        ((split-by "&"))
+        (map (split-by "="))
+        (map #(apply hash-map %))
+        (reduce merge))))
   ([] nil))
