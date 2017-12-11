@@ -7,9 +7,9 @@
     (is(= {"lang" "clj" "runtime" "jvm"} (parse "lang=clj&runtime=jvm")))))
 
 (deftest empty-str
-  (testing "parse returns an empty vector when received argument is empty str"
-    (is(= [] (parse "")))))
+  (testing "parse returns an nil when received argument is empty str"
+    (is(= nil (parse "")))))
 
 (deftest no-args
-  (testing "parse returns empty vector when no params are received"
-    (is(= [] (parse)))))
+  (testing "parse returns nil when no params are received"
+    (is(= nil (parse)))))
