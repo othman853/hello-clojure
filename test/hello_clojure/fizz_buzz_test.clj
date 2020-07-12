@@ -13,3 +13,7 @@
 (deftest when-number-is-only-buzz
   (testing "Number is only Buzz"
     (is (= "Buzz" (fizz-buzz 5)))))
+
+(deftest when-number-is-neither
+  (testing "Number is neither Fizz nor Buzz"
+    (is (= "7" (fizz-buzz 7)))))
