@@ -1,12 +1,11 @@
 (ns hello-clojure.fizz-buzz)
 
-(defn fizz
-  [n]
-  (= (mod n 3) 0))
+(defn is-divisible-by [d]
+  (fn [x]
+    (= 0 (mod x d))))
 
-(defn buzz
-  [n]
-  (= (mod n 5) 0))
+(def fizz (is-divisible-by 3))
+(def buzz (is-divisible-by 5))
 
 (defn fizz-buzz
   [n]
