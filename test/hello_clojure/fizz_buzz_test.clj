@@ -9,3 +9,7 @@
 (deftest when-number-is-only-fizz
   (testing "Number is only Fizz"
     (is (= "Fizz" (fizz-buzz 3)))))
+
+(deftest when-number-is-only-buzz
+  (testing "Number is only Buzz"
+    (is (= "Buzz" (fizz-buzz 5)))))

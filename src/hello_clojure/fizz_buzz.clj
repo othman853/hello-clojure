@@ -1,7 +1,8 @@
 (ns hello-clojure.fizz-buzz)
 
 (defn fizz
-  [n] (= (mod n 3) 0))
+  [n]
+  (= (mod n 3) 0))
 
 (defn buzz
   [n]
@@ -11,5 +12,6 @@
   [n]
   (cond
     (and (fizz n) (buzz n)) "FizzBuzz"
-    (fizz n) "Fizz"))
+    (fizz n) "Fizz"
+    (buzz n) "Buzz"))
 
