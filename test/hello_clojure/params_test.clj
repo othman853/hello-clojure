@@ -9,7 +9,3 @@
 (deftest empty-str
   (testing "parse returns an nil when received argument is empty str"
     (is(= nil (parse "")))))
-
-(deftest no-args
-  (testing "parse returns nil when no params are received"
-    (is(= nil (parse)))))
